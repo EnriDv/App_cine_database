@@ -1,24 +1,32 @@
 import oracledb
 
 try: 
-    connection = oracledb.connect(user='System', password='ucbdatabase', dsn='DESKTOP-6TGSEQQ/XE')
-    cursor = connection.cursor()
+    con = oracledb.connect(user='System', password='ucbdatabase', dsn='DESKTOP-6TGSEQQ/XE')
+    cursor = con.cursor()
     print('FELICIDADES')
 except:
     print('ERROR')
 
-try:
-    cursor.execute("""
-                   select * from USSER
-                   """)
-    for i in len(cursor):
-        print(cursor)
-        cursor+=1
 
-    print('hola')
-    
-except:
-    print('ERROR')
+
+def query():
+    try:
+        cursor.execute(""" select ID from account_""")
+        
+        row = cursor.fetchall()
+
+        print(row)
+        
+        for r in row:
+            print(r)
+
+        print('EXITO')
+        
+
+    except:
+        print('ERROR')
+
+query()
 
 cursor.close()
-connection.close()
+con.close()
