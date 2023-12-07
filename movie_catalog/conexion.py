@@ -1,7 +1,7 @@
 import oracledb
 
 try: 
-    con = oracledb.connect(user='System', password='ucbdatabase', dsn='DESKTOP-6TGSEQQ/XE')
+    con = oracledb.connect(user='System', password='ucbdatabase', dsn='localhost:1521/xe')
     cursor = con.cursor()
     print('FELICIDADES')
 except:
@@ -11,7 +11,7 @@ except:
 
 def query():
     try:
-        cursor.execute(""" select ID from account_""")
+        cursor.execute(""" select * from ACCOUNT """)
         
         row = cursor.fetchall()
 
@@ -28,5 +28,6 @@ def query():
 
 query()
 
-cursor.close()
-con.close()
+def exit():
+    cursor.close()
+    con.close()
