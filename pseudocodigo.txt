@@ -1,0 +1,47 @@
+MOVIE CATALOG
+
+	Cinemax:
+		main:
+		App() // crea el objeto tipo app
+
+	CLIENT:
+		conexion:
+			clase conect
+				init():
+				  conecta la base de datos
+				  crea un cursor
+				exit():
+				  cierra el cursor
+				  cierra la conexion
+		
+		login:
+			clase app:
+				init():
+				  configura la ventana
+				  se crea el area donde se usara pondra el texto
+				  crea y configura los textos
+				  se crean las entradas de datos (usuario y contraseña)
+				  se crea el boton de inicio de sesion
+
+				verify():
+				  conecta la base de datos
+				  realiza la consulta de los usuarios y contrasenha
+				  obtiene las entradas del login
+				  valida la entrada a la aplicacion:
+					si coinciden entra
+					si no coinciden, muestra un error
+
+		panel:
+			clase panel:
+				init():
+				  se configura laventana
+				  se crea el titulo de la aplicacion
+				  se crea el texto que indica lo que hay que hacer
+
+				select_genre():
+				  se crea la conexion
+				  realiza la consulta y se guarda en una variable
+				  se cierra la conexion
+				  se crea la lista desplegable y se le asignan los valores de la consulta
+				  se configura la lista desplegable
+				  
