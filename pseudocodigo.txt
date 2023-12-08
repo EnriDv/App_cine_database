@@ -40,8 +40,20 @@ MOVIE CATALOG
 
 				select_genre():
 				  se crea la conexion
-				  realiza la consulta y se guarda en una variable
+				  realiza la consulta donde selecciona los generos y se guarda en una variable
 				  se cierra la conexion
 				  se crea la lista desplegable y se le asignan los valores de la consulta
 				  se configura la lista desplegable
+				  cuando la lista es un valor nulo, no hace nada
+				  cuando no es nulo, llama a la funcion generar tabla
+
+				create_table():
+				  se crea la conexion con la base de datos
+				  se realiza la consulta donde selecciona las peliculas del genero seleccionado
+				  se genera una nueva ventana
+				  se genera una tabla y se nombran sus atributos
+				  se configuran las columnas
+				  se configuran los encabezados
+				  se llenan los datos de la tabla, con la consulta
+ 
 				  
