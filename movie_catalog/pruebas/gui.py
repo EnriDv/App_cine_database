@@ -1,6 +1,6 @@
 
 import tkinter as tk
-#from movie_catalog.DataBase.querry import *
+#from querry import *
 
 
 def menu(root):
@@ -26,14 +26,7 @@ class Frame(tk.Frame):
         super().__init__(root)
         self.root = root
         self.pack()
-        
-        self.buton = tk.Button(self, text='ACTIVAR')
-        self.buton.config(width=20, font= ('Arial', 12, 'bold'),
-                           fg = '#dad5d6', bg='#158645',
-                           cursor='hand2', activebackground='#35bd6f',
-                           command= self.buton.destroy)
-        self.buton.grid(row=1, column=1, padx = 10, pady = 10)
-        
+
         self.movie_space()
         self.disable_button()
 
@@ -51,7 +44,7 @@ class Frame(tk.Frame):
         self.entry_duration = tk.Entry(self)
         self.entry_duration.config(width = 50)
         self.entry_duration.grid(row = 1, column = 1, padx = 10, pady = 10)
-
+        
         #BOTONES
 
         self.buton1 = tk.Button(self, text='Boton')
@@ -92,31 +85,7 @@ class Frame(tk.Frame):
         pass
 
     def add_movies(self):
-
+        
         self.disable_button()
         pass
 
-
-
-
-"""
-import conexion
-
-def mensaje():
-    print("boton")
-
-ventana = Tk()
-ventana.geometry("800x480")
-ventana.title("CATALOGO")
-
-lbl = Label(ventana, text='CATALOGO DE PELICULAS')
-lbl.pack()
-
-btn = Button(ventana, text='Presionar para\nrealizar una conulta', command= conexion.query)
-btn.pack()
-
-btn2 = Button(ventana, text='Presionar para salir', command= conexion.exit)
-btn2.pack()
-
-ventana.mainloop()
-"""
