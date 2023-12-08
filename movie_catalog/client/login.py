@@ -17,12 +17,14 @@ class App:
         password = self.password.get()
         if (user, password) in row:
             self.window.destroy()
+            con.exit()
             Panel()
         else:
             messagebox.showerror(message="Ususario o Contraseña incorrecta", title='Error')
         
 
     def __init__(self):
+        
         self.window = Tk()
         self.window.title('Login')
         self.window.geometry('400x600')
