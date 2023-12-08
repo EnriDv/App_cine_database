@@ -50,8 +50,8 @@ class Panel:
         window.title("Tabla")
 
         table = ttk.Treeview(window)
+        table["columns"] = ("Title", "Duration", "Clasification")
 
-        # Configurar encabezados de columna
         table.column("#0", width=0, stretch=tk.NO)  
         table.column("Title", anchor=tk.W, width=100)
         table.column("Duration", anchor=tk.W, width=80)
